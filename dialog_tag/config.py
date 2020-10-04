@@ -16,5 +16,6 @@ model_location = {
     }
 
 model_download_link = {
-        "distilbert-base-uncased" : "https://www.dropbox.com/sh/crq7khtdd99u4mo/AABdQb8W1lJ37Cm-CfOSISuBa?dl=1"
+        "distilbert-base-uncased" : "https://www.dropbox.com/sh/crq7khtdd99u4mo/AABdQb8W1lJ37Cm-CfOSISuBa?dl=1",
+        "bert-base-uncased" : "https://www.dropbox.com/sh/ajlwp36obho2cbe/AADHTY4_PhSOAQzveCJIna4Va?dl=1"
 }
