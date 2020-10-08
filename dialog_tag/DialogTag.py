@@ -8,6 +8,7 @@ from transformers import AutoTokenizer, TFAutoModelForSequenceClassification, Au
 from .config import model_params, model_location
 from .get_weights import Download
 from .label_mapping import LabelMapping
+from . import __version__
 
 
 class DialogTag:
@@ -20,9 +21,12 @@ class DialogTag:
         self.__label_mapping_path = os.path.join(self.__lib_path, self.__model_name) + model_location["label_mapping"]
 
         # print(self.__lib_path, self.__model_path, self.__label_mapping_path)
-
-        self.__num = len(os.listdir(self.__model_path))
-        if(self.__num<3):
+        path_exists = os.path.exists(self.__model_path)
+        self.__num = 0
+        if(path_exists==True):
+            self.__num = len(os.listdir(self.__model_path))
+        
+        if(self.__num<3 or path_exists==False):
             print("Model not found in cache. Downloading...")
             self.__model_file = Download(self.__model_name)
             self.__model_file.download_file()

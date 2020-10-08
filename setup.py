@@ -5,7 +5,7 @@ with open("README.md", mode="r", encoding="utf-8") as readme_file:
 
 setuptools.setup(
     name="DialogTag",
-    version="1.1.2",
+    version="1.1.3",
     author="Bhavitvya Malik",
     author_email="bhavitvya.malik@gmail.com",
     description="A python library to classify dialogue tag.",
