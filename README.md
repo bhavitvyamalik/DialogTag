@@ -93,6 +93,8 @@ print(output)
 
 ## Available pre-trained models
 
+Update: We now have bert-base-uncased model available!
+
 Currently we have only distilbert-base-uncased available. We're planning to extend it to bert-base-uncased and roberta-base. Stay tuned for further updates!
 
 ## License
