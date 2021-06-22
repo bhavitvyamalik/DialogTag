@@ -12,13 +12,13 @@ from . import __version__
 
 
 class DialogTag:
-    def __init__(self, model_name):
+    def __init__(self, model_name, model_path=None):
 
         self.__model_name = model_name
 
         self.__lib_path = f"{str(Path.home())}"+ model_location["MODEL"]
-        self.__model_path = os.path.join(self.__lib_path, self.__model_name)
-        self.__label_mapping_path = os.path.join(self.__lib_path, self.__model_name) + model_location["label_mapping"]
+        self.__model_path = model_path or os.path.join(self.__lib_path, self.__model_name)
+        self.__label_mapping_path = self.__model_path + model_location["label_mapping"]
 
         # print(self.__lib_path, self.__model_path, self.__label_mapping_path)
         path_exists = os.path.exists(self.__model_path)
